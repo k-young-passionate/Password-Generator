@@ -75,8 +75,10 @@ button.thin {
 
 section {
     display: flex;
+    flex-wrap: wrap;
     background-color: rgba(100, 150, 255, 0.9);
     min-height: 100%; 
+    overflow: scroll;
 }
 
 div.title{
@@ -119,18 +121,18 @@ div.output{
 p.maintitle {
     font-weight: bolder;
     margin-left: 1%;
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
 p.title {
     margin-top: 50px;
     margin-left: 2%;
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 p.content {
     margin-top: 1px;
     margin-left: 4%;
-    font-size: 1.1em;
+    font-size: 0.8em;
 }
