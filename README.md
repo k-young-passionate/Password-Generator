@@ -14,6 +14,8 @@ Easy and safe password generator with your password and salts.
 1. **It's Easy.** <br>
    If you use this page, the three things you should remember are the original password & salt, the length of the new password, and the URL of this site.
 2. **It's Safe.** <br>
-   Nobody takes your password cause password generation is processed in YOUR OWN COMPUTER you are using now.
-   NO TRANSMISSION YOUR PASSWORD
+   Nobody takes your password cause password generation is processed in 
+   <span style="font-size:1.2em;">**YOUR OWN COMPUTER** </span> 
+   you are using now. <br>
+   <span style="font-size:1.2em;">**NO TRANSMISSION YOUR PASSWORD** <br> </span>
    Just keep your PC monitor from seeing by others.
