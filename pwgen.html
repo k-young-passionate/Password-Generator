@@ -1,20 +1,44 @@
 <html>
-        <head>
-                <title> Password generator </title>
-        </head>
-        <body>
-                <form name="pw" action="/pwgen" method="POST">
-                        <p>
-                                <strong> Password </strong>
-                                <input type='password' name="password" value="input password"> </input>
-                        </p>
-                        <p>
-                                <strong> salt </strong>
-                                <input type='text' name='salt' value='input salt'>
-                        </p>
-                        <p>
-                                <input type="submit" value="submit">
-                        </p>
-                </form>
-        </body>
+    <head>
+	<title> Password generator </title>
+    <link rel="stylesheet" type="text/css" href="static/css/index.css">
+    </head>
+    <body>
+	<div class="title">
+	    <h1>Safe Password Generator</h1>
+	</div>
+	<div>
+		<table>
+			<tr>
+				<td class='key'> <strong> Password </strong> </td>
+				<td class='value'> <input type='password' name="password" id="password" class='textinput' autofocus tabindex="1"> </input> </td>
+				<td rowspan="3" class="button"><button class="bold" onclick="buttonHandler()" tabindex="4"> Generate </button></td>
+			</tr>
+			<tr>
+				<td class='key'><strong> Salt </strong></td>
+				<td class='value'><input type='text' name='salt' id='salt' class='textinput' tabindex="2"></td>
+			</tr>
+			<tr>
+				<td class='key'><strong> Length </strong></td>
+				<td class='value'><input type='number' name='length' id='length' class="textinput" tabindex="3" value="-1"></td>
+			</tr>
+		</table>
+	</div>
+	<div class="content">
+		<table>
+			<tr>
+				<th> New safe password </th>
+			</tr>
+			<tr>
+				<td> <textarea id='newpw' class='result' readonly tabindex="-1"> </textarea></td>
+			</tr>
+			<tr>
+				<td class="button"> <button class="thin" onclick="copytoCB()">Copy to Clipboard</button></td>
+			</tr>
+		</table>
+	</div>
+
+    <script type="text/javascript" src="static/js/index.js"></script>
+
+    </body>
 </html>

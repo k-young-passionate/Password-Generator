@@ -1,0 +1,61 @@
+table {
+    align-self: center;
+}
+
+th {
+    text-align: start;
+}
+
+td.key{
+    width: 100px;
+}
+
+td.value {
+    width: 300px;
+}
+
+td.button {
+    text-align: center;
+}
+
+input.textinput {
+    width: 280px;
+}
+
+textarea.result {
+    width: 700px;
+    height: 100px;
+    font-size: 20px;
+}
+
+button.bold {
+    width: 100px;
+    height: 60px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+button.thin {
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+div {
+    display: flex;
+    margin: 1%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+div.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.content{
+    margin-top: 50px;
+}
