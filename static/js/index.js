@@ -2,7 +2,10 @@ function buttonHandler() {
     var pw = document.getElementById("password").value;
     var salt = document.getElementById("salt").value;
     var length = document.getElementById("length").value;
-    var include = document.getElementById("include").value;
+    var include = "True";
+    if (document.getElementById("notinclude").checked) {
+        include = "False";
+    }
     var newpw = SHA256(pw, salt, include);
     if (length > 0) {
         newpw = newpw.slice(-1 * length);
@@ -22,8 +25,8 @@ function copytoCB() {
     alert("New password has been copied!");
 }
 
-const BASE_INCLUDE_SPECIALCHAR = '$%^zyxwvutsrqponmkjihgfedcba123456789ABCDEFGHJKLMNPQRSTUVWXYZ!@#'
-const BASE_NOTINCLUDE_SPECIALCHAR = 'zyxwvutsrqponmlkjihgfedcba0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZaA'
+const BASE_INCLUDE_SPECIALCHAR = '$%^zyxwvutsrqponmkjihgfedcba123456789ABCDEFGHJKLMNPQRSTUVWXYZ!@#';
+const BASE_NOTINCLUDE_SPECIALCHAR = 'zyxwvutsrqponmlkjihgfedcba0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZaA';
 
 function SHA256(origin, salt, include) {
     var chrsz = 8;
@@ -122,10 +125,13 @@ function SHA256(origin, salt, include) {
         for(var i = c_insufficient; i < 6; i++){
             origin += "0";
         }
-        var BASE64 = BASE_INCLUDE_SPECIALCHAR;
-        if(include=="FALSE"){
-            BASE64 = BASE_NOTINCLUDE_SPECIALCHAR;
+        console.log(include=="False")
+        if(include=="False"){
+            var BASE64 = BASE_NOTINCLUDE_SPECIALCHAR;
+        } else {
+            var BASE64 = BASE_INCLUDE_SPECIALCHAR;
         }
+        console.log(BASE64)
         for (var c = 0; c < p.length; c += 6) {
             r += BASE64[parseInt(p.slice(c, c+6), 2)];
         }
