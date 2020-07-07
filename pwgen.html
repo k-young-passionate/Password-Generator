@@ -51,6 +51,12 @@
 						If you set it less than 1, the length limitation will not be applied.<br>
 					</td>
 				</tr>
+				<tr>
+					<td class="key">Special Characters</td>
+					<td class="value">
+						You can choose to include special characters on a new password or not.
+					</td>
+				</tr>
 			</table>
 			</p>
 			<p class='title'>
@@ -82,7 +88,7 @@
 							<input type='password' name="password" id="password" class='textinput' autofocus
 								tabindex="1"> </input>
 						</td>
-						<td rowspan="3" class="button">
+						<td rowspan="4" class="button">
 							<button class="bold" onclick="buttonHandler()" tabindex="4">
 								Generate
 							</button>
@@ -96,6 +102,13 @@
 						<td class='key'><strong> Length </strong></td>
 						<td class='value'><input type='number' name='length' id='length' class="textinput" tabindex="3"
 								value="-1"></td>
+					</tr>
+					<tr>
+						<td class="key">Special Characters</td>
+						<td class="value">
+							<input type="radio" name="include" id="include" value="True"> Include 
+							<input type="radio" name="include" id="include" value="False"> Not Include 
+						</td>
 					</tr>
 				</table>
 				</p>
