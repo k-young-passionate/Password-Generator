@@ -1,3 +1,5 @@
+<!DOCTYPE HTML5>
+
 <html>
 
 <head>
@@ -10,42 +12,114 @@
 		<h1>Safe Password Generator</h1>
 	</div>
 	<hr>
-	
-	<div class='content'>
-		<div class="input">
+
+	<section class="container">
+		<div class='description'>
+			<p class="maintitle">Manual</p>
+			<p class='title'>
+				Description: What is this site for?
+			</p>
+			<p class="content">
+				Convert your "Hacking easy password" into the password that hard to remember <strong> IN YOUR COMPUTER.
+				</strong><br>
+				There is <strong> NO TRANSMISSION OF YOUR PASSWORD </strong>in this site.
+			</p>
+			<p class='title'>
+				How to Use?
+			</p>
+			<p class='content'>
+				If you just fill in the 3 spaces, then you will get a<strong> STRONG</strong> password. <br>
+				You can get same password forever with the same 3 spaces' values. <br>
+				The space's value explanation is in the next line. <br> <br>
 			<table>
 				<tr>
-					<td class='key'> <strong> Password </strong> </td>
-					<td class='value'> <input type='password' name="password" id="password" class='textinput' autofocus
-							tabindex="1"> </input> </td>
-					<td rowspan="3" class="button"><button class="bold" onclick="buttonHandler()" tabindex="4"> Generate
-						</button></td>
+					<td class="key">Password</td>
+					<td class="value">Fill your password that you are usually using.</td>
 				</tr>
 				<tr>
-					<td class='key'><strong> Salt </strong></td>
-					<td class='value'><input type='text' name='salt' id='salt' class='textinput' tabindex="2"></td>
+					<td class="key">Easy words</td>
+					<td class="value">
+						Fill any easy word that can be varied with web pages. <br>
+						example) GolfGame (in Google), FreshFruit (in Facebook) <br>
+					</td>
 				</tr>
 				<tr>
-					<td class='key'><strong> Length </strong></td>
-					<td class='value'><input type='number' name='length' id='length' class="textinput" tabindex="3"
-							value="-1"></td>
+					<td class="key">Length</td>
+					<td class="value">
+						There might be a site that sets the password length limitation.<br>
+						You can set the length of a new password. <br>
+						If you set it less than 1, the length limitation will not be applied.<br>
+					</td>
 				</tr>
 			</table>
+			</p>
+			<p class='title'>
+				What is the expectations?
+			</p>
+			<p class='content'>
+				1. You can get a strong password with easy memorization. You can get the same one in this page. <br>
+				2. If you stolen a password for one of web sites, your other password would be safe. <br>
+				3. If one of your passwords has been exposed to someone for a moment, it's not easy to remember so that
+				your password might be safe.
+			</p>
+			<p class='title'>
+				Keep in Mind!
+			</p>
+			<p class='content'>
+				Do not expose your "Easywords" and especially "Password." <br>
+				If those things are exposed, your strong passwords will become very weak.
+			</p>
 		</div>
-		<div class="output">
-			<table>
-				<tr>
-					<th> New safe password </th>
-				</tr>
-				<tr>
-					<td class='resulttd'> <textarea id='newpw' class='result' readonly tabindex="-1"> </textarea></td>
-				</tr>
-				<tr>
-					<td class="button"> <button class="thin" onclick="copytoCB()">Copy to Clipboard</button></td>
-				</tr>
-			</table>
+		<div class='content'>
+			<p class="maintitle">Password Converter</p>
+			<div class="input">
+				<p class="title">Materials for a new password</p>
+				<p class="content">
+				<table>
+					<tr>
+						<td class='key'> <strong> Password </strong> </td>
+						<td class='value'>
+							<input type='password' name="password" id="password" class='textinput' autofocus
+								tabindex="1"> </input>
+						</td>
+						<td rowspan="3" class="button">
+							<button class="bold" onclick="buttonHandler()" tabindex="4">
+								Generate
+							</button>
+						</td>
+					</tr>
+					<tr>
+						<td class='key'><strong> Easy words </strong></td>
+						<td class='value'><input type='text' name='salt' id='salt' class='textinput' tabindex="2"></td>
+					</tr>
+					<tr>
+						<td class='key'><strong> Length </strong></td>
+						<td class='value'><input type='number' name='length' id='length' class="textinput" tabindex="3"
+								value="-1"></td>
+					</tr>
+				</table>
+				</p>
+			</div>
+			<div class="output">
+				<p class="title">Output</p>
+				<p class="content">
+				<table>
+					<tr>
+						<th> New safe password </th>
+					</tr>
+					<tr>
+						<td class='resulttd'> <textarea id='newpw' class='result' readonly tabindex="-1"> </textarea>
+						</td>
+					</tr>
+					<tr>
+						<td class="button"> <button class="thin" onclick="copytoCB()">Copy to Clipboard</button></td>
+					</tr>
+				</table>
+				</p>
+			</div>
 		</div>
-	</div>
+	</section>
+
 	<script type="text/javascript" src="static/js/index.js"></script>
 
 </body>
