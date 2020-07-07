@@ -1,4 +1,3 @@
-
 function buttonHandler() {
     var pw = document.getElementById("password").value;
     var salt = document.getElementById("salt").value;
@@ -24,7 +23,7 @@ function copytoCB() {
 }
 
 const BASE_INCLUDE_SPECIALCHAR = '$%^zyxwvutsrqponmkjihgfedcba123456789ABCDEFGHJKLMNPQRSTUVWXYZ!@#'
-const BASE_NOTINCLUDE_SPECIALCHAR = 'zyxwvutsrqponmlkjihgfedcba0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+const BASE_NOTINCLUDE_SPECIALCHAR = 'zyxwvutsrqponmlkjihgfedcba0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZaA'
 
 function SHA256(origin, salt, include) {
     var chrsz = 8;
@@ -113,26 +112,24 @@ function SHA256(origin, salt, include) {
         return utftext;
     }
     function binb2base64(origin, include) {
+        console.log(include)
         var r = "";
         var p = "";
-        var c = origin.length % 3;
-
-        if (c > 0) {
-            for (; c < 3; c++) {
-                p += '=';
-                origin += "\0";
-            }
+        for (var i =0; i<8; i++){
+            p += (origin[i]>>>0).toString(2)
+        }
+        var c_insufficient = p.length % 6;
+        for(var i = c_insufficient; i < 6; i++){
+            origin += "0";
         }
         var BASE64 = BASE_INCLUDE_SPECIALCHAR;
         if(include=="FALSE"){
             BASE64 = BASE_NOTINCLUDE_SPECIALCHAR;
         }
-        for (c = 0; c < origin.length; c += 3) {
-            var n = (origin.charCodeAt(c) << 16) + (origin.charCodeAt(c + 1) << 8) + origin.charCodeAt(c + 2);
-            n = [(n >>> 18) & 63, (n >>> 12) & 63, (n >>> 6) & 63, n & 63];
-            r += BASE64[n[0]] + BASE64[n[1]] + BASE64[n[2]] + BASE64[n[3]];
+        for (var c = 0; c < p.length; c += 6) {
+            r += BASE64[parseInt(p.slice(c, c+6), 2)];
         }
-        return r.substring(0, r.length - p.length) + p;
+        return r;
     }
     var s = origin + salt;
     s = Utf8Encode(s);
