@@ -74,8 +74,9 @@ button.thin {
 }
 
 section {
+    display: flex;
     background-color: rgba(100, 150, 255, 0.9);
-    height: 100%;
+    min-height: 100%; 
 }
 
 div.title{
