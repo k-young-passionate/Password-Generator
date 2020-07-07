@@ -3,7 +3,8 @@ function buttonHandler() {
     var pw = document.getElementById("password").value;
     var salt = document.getElementById("salt").value;
     var length = document.getElementById("length").value;
-    var newpw = SHA256(pw, salt).slice(0, -1);
+    var include = document.getElementById("include").value;
+    var newpw = SHA256(pw, salt, include);
     if (length > 0) {
         newpw = newpw.slice(-1 * length);
     }
@@ -25,7 +26,7 @@ function copytoCB() {
 const BASE_INCLUDE_SPECIALCHAR = '$%^zyxwvutsrqponmkjihgfedcba123456789ABCDEFGHJKLMNPQRSTUVWXYZ!@#'
 const BASE_NOTINCLUDE_SPECIALCHAR = 'zyxwvutsrqponmlkjihgfedcba0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
-function SHA256(origin, salt) {
+function SHA256(origin, salt, include) {
     var chrsz = 8;
     var hexcase = 0;
     function safe_add(x, y) {
@@ -135,5 +136,5 @@ function SHA256(origin, salt) {
     }
     var s = origin + salt;
     s = Utf8Encode(s);
-    return binb2base64(core_sha256(str2binb(s), s.length * chrsz));
+    return binb2base64(core_sha256(str2binb(s), s.length * chrsz), include);
 }
