@@ -1,17 +1,41 @@
+hr {
+    height: 2px;
+    background-color: black;
+    border-color: black;
+}
+
+h1 {
+    align-self: center;
+}
+
 table {
     align-self: center;
+    padding: 5px;
+    border: 1px solid cornsilk;
+    border-radius: 5px;
+    border-color: cornsilk;
+    background: rgba(255, 255, 255, 0.1)
 }
 
 th {
     text-align: start;
+    border-bottom: 1px solid cornsilk;
+    padding-bottom: 8px;
 }
 
 td.key{
     width: 100px;
+    border-right: 1px solid cornsilk;
 }
 
 td.value {
     width: 300px;
+    padding-left: 10px;
+    border-right: 1px solid cornsilk;
+}
+
+td.resulttd {
+    padding-top: 10px;
 }
 
 td.button {
@@ -40,22 +64,37 @@ button.thin {
     height: 40px;
     font-size: 12px;
     font-weight: bold;
-}
-
-div {
-    display: flex;
-    margin: 1%;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
+    margin-top: 10px;
 }
 
 div.title{
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
+    background-color: ivory;
 }
 
-div.content{
-    margin-top: 50px;
+div.content {
+    background-color: rgba(100, 150, 255, 0.9);
+    height: 100vh;
+    align-items: center;
+}
+
+
+div.input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    padding-top: 5%;
+}
+
+div.output{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 30px;
+    padding-top: 5%;
 }
