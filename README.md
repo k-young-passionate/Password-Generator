@@ -4,10 +4,12 @@ Easy and safe password generator with your password and salts.
 ## Usage
 1. **PASSWORD** <br>
    Enter your password that you are usually used.
-2. **SALT** <br>
+2. **Easy Words** <br>
    Enter some variation words like your pet name, your favorite animal name, etc.
 3. **LENGTH** <br> 
    Enter the number you want to set the limitation of a new password length.
+4. **Special Characters** <br> 
+   Choose whether the new password includes special characters or not.
 
 
 ## Description
