@@ -88,6 +88,9 @@
 							<input type='password' name="password" id="password" class='textinput' autofocus
 								tabindex="1"> </input>
 						</td>
+						<td>
+							<button onclick="textshow('password');"> show </button>
+						</td>
 						<td rowspan="4" class="button">
 							<button class="bold" onclick="buttonHandler()" tabindex="4">
 								Generate
@@ -97,11 +100,13 @@
 					<tr>
 						<td class='key'><strong> Easy words </strong></td>
 						<td class='value'><input type='text' name='salt' id='salt' class='textinput' tabindex="2"></td>
+						<td><button onclick="textshow('salt');"> show </button></td>
 					</tr>
 					<tr>
 						<td class='key'><strong> Length </strong></td>
 						<td class='value'><input type='number' name='length' id='length' class="textinput" tabindex="3"
 								value="-1"></td>
+						<td></td>
 					</tr>
 					<tr>
 						<td class="key">Special Characters</td>
@@ -109,6 +114,7 @@
 							<input type="radio" name="include" id="include" value="True" checked="checked"> Include </input>
 							<input type="radio" name="include" id="notinclude" value="False"> Not Include </input>
 						</td>
+						<td></td>
 					</tr>
 				</table>
 				</p>
@@ -121,10 +127,12 @@
 						<th> New safe password </th>
 					</tr>
 					<tr>
-						<td class='resulttd'> <textarea id='newpw' class='result' readonly tabindex="-1"> </textarea>
+						<td class='resulttd' colspan="2">
+							<input id='newpw' class='result' type="password" readonly tabindex="-1"> </input>
 						</td>
 					</tr>
 					<tr>
+						<td> <button onclick="textshow('newpw')">show</button></td>
 						<td class="button"> <button class="thin" onclick="copytoCB()">Copy to Clipboard</button></td>
 					</tr>
 				</table>

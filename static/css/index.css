@@ -41,6 +41,8 @@ td.value {
 
 td.resulttd {
     padding-top: 10px;
+    align-items: center;
+    align-content: center;
 }
 
 td.button {
@@ -51,7 +53,7 @@ input.textinput {
     width: 280px;
 }
 
-textarea.result {
+input.result {
     width: 700px;
     height: 100px;
     font-size: 20px;

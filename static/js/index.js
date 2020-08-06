@@ -13,6 +13,16 @@ function buttonHandler() {
     document.getElementById("newpw").value = newpw;
 }
 
+function textshow(from) {
+    console.log("test")
+    var element = document.getElementById(from);
+    if (element.type == 'password') {
+        element.type = 'text';
+    } else {
+        element.type = 'password';
+    }
+}
+
 function copytoCB() {
     var copiedText = document.createElement('textarea');
     copiedText.value = document.getElementById("newpw").value;
