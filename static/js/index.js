@@ -38,6 +38,16 @@ function copytoCB() {
 const BASE_INCLUDE_SPECIALCHAR = '$%^zyxwvutsrqponmkjihgfedcba123456789ABCDEFGHJKLMNPQRSTUVWXYZ!@#';
 const BASE_NOTINCLUDE_SPECIALCHAR = 'zyxwvutsrqponmlkjihgfedcba0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZaA';
 
+/**
+*
+*  Secure Hash Algorithm (SHA256)
+*  http://www.webtoolkit.info/
+*
+*  Original code by Angel Marin, Paul Johnston.
+*  Modified by Keonyoung Shim
+*
+**/
+
 function SHA256(origin, salt, include) {
     var chrsz = 8;
     var hexcase = 0;
