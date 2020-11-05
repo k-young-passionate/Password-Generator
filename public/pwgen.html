@@ -5,6 +5,8 @@
 <head>
 	<title> Password generator </title>
 	<link rel="stylesheet" type="text/css" href="static/css/index.css">
+	<!-- <script type="module" src="static/js/index.js"></script> -->
+
 </head>
 
 <body>
@@ -92,7 +94,9 @@
 							<button onclick="textshow('password');"> show </button>
 						</td>
 						<td rowspan="4" class="button">
-							<button class="bold" onclick="buttonHandler()" tabindex="4">
+							<!-- <button id="genBtn" class="bold" onclick="buttonHandler()" tabindex="4"> -->
+							<button id="genBtn" class="bold" tabindex="4">
+
 								Generate
 							</button>
 						</td>
@@ -140,8 +144,9 @@
 			</div>
 		</div>
 	</section>
-
-	<script type="text/javascript" src="static/js/index.js"></script>
+	
+	<script>var exports = {};</script>
+	<script type="module" src="index.js"></script>
 
 </body>
 
